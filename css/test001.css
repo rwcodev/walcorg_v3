@@ -1,6 +1,0 @@
-nav ul {
-    list-style-type: none; /* Quitamos las viñetas de la lista */
-}
-nav li {
-    display: inline; /* Ítems del menú en una línea horizontal */ 
-}
