@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- ////////////// Agregar TAG de rastreo de Google Analytics ///////////// -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6PKCJ3K9Q1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6PKCJ3K9Q1');
+</script>
+<!-- ////////////// Agregar TAG de rastreo de Google Analytics ///////////// -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="rwcodev" />
+		<meta name="description" content="Carbon capture trough token creation" />
+    <title>CO2 Capture | WALCORG INC</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="wrapper">
+<!-- ////////////////////////////////////// GLOBE-UI ///////////////////////////////////////////////// -->
+        <div id="containAAAAer" class="one">                
+            
+            <span id="year1980" class="year"></span>
+            <span id="year2000" class="year"></span>
+            <span id="year2020" class="year"></span>
+
+             <script type="text/javascript" src="/globe/third-party/Detector.js"></script>
+             <script type="text/javascript" src="/globe/third-party/three.min.js"></script>
+             <script type="text/javascript" src="/globe/third-party/Tween.js"></script>
+             <script type="text/javascript" src="/globe/globe-giratory.js"></script>
+             <script type="text/javascript">
+        
+             if(!Detector.webgl){
+                Detector.addGetWebGLMessage();
+              } else {        
+                var years = ['1980','2000','2020'];
+                var container = document.getElementById('container');
+                var globe = new DAT.Globe(container);        
+                //   console.log(globe);
+                 var i, tweens = [];
+              
+                 var settime = function(globe, t) {
+                  return function() {
+                        new TWEEN.Tween(globe).to({time: t/years.length},500).easing(TWEEN.Easing.Cubic.EaseOut).start();
+                        var y = document.getElementById('year'+years[t]);
+                        if (y.getAttribute('class') === 'year active') {return;}
+                        var yy = document.getElementsByClassName('year');
+                        for(i=0; i<yy.length; i++) {yy[i].setAttribute('class','year');}
+                        y.setAttribute('class', 'year active');
+                    };
+                };              
+                     for(var i = 0; i<years.length; i++) {var y = document.getElementById('year'+years[i]); y.addEventListener('mouseover', settime(globe,i), false);}              
+                var xhr;
+                TWEEN.start();       
+                xhr = new XMLHttpRequest();
+                xhr.open('GET', '/globe/co2-concentration.json', true);
+                xhr.onreadystatechange = function(e) {
+                    if (xhr.readyState === 4) {
+                     if (xhr.status === 200) {
+                       var data = JSON.parse(xhr.responseText);
+                       window.data = data;
+                       for (i=0;i<data.length;i++) {globe.addData(data[i][1], {format: 'magnitude', name: data[i][0], animated: true});}
+                      globe.createPoints();
+                      settime(globe,0)();
+                      globe.animate();
+                      document.body.style.backgroundImage = 'none'; // remove loading
+                   }
+                 }
+               };
+                xhr.send(null);
+             }        
+                </script>
+        </div>
+<!-- ////////////////////////////////////// GLOBE-UI /////////////////////////////////////////////////  -->
+                <div class="two"></div>
+                <div class="three"><p style="font-family: cargo;">CO2 CAPTURE TROUGH TOKEN CREATION</p></div>
+             <div class="four"><button class="btn success">Descargar Clorela OS</button></div>
+
+<!-- ///////////////////////////// API - CALL - URL ////////////////////////////////// -->
+        <script>
+             const API_URL = 'https://api.v2.emissions-api.org/api/v2/carbonmonoxide/geo.json' +
+                 '?country=US&begin=2023-05-01&end=2023-05-04';
+    
+                window.onload = function () {
+                   fetch(API_URL)
+                  .then(response => response.json())
+                  .then(data => {console.log(data)})//Here is the array
+                }console.log(API_URL);   //Here is the array
+        </script>
+<!-- ///////////////////////////// API - CALL - URL ///////////////////////////////// -->
+
+             <div class="col-4 col-sm-5 col-md-5 col-lg-5">
+                <div class="float-end w-15">
+                <div class="openbtn">
+                <span onclick="$('.aside').asidebar('open')">&#9776;</span>
+                </div>
+             <div class="aside">
+              <span class="close" data-dismiss="aside" aria-hidden="true">&times;</span>
+              <div class="aside-contents">
+                  <a href="login.html">LOG IN</a>
+                  <a href="a-home.html">REGISTER</a>                  
+                  <a href="pulic-exchange.html">Exchange</a>
+                  <a href="public-downloads.html">Downloads</a>
+                  <a href="earth-emissions.html"><img style="max-width:30px;" src="/assets/img/global.png" />US</a>
+              </div>
+            </div>
+            <div class="aside-backdrop"></div>
+            </div>
+           </div>
+
+            <div class="six"><p style="font-family: cargo;">PHOTOBIORREACTORS WITH EMBEDDED BLOCKCHAIN TECHNOLOGY</p></div>
+            <div class="seven"></div>
+            <div class="eight"><p style="font-family: cargo;">OPEN SOURCE SOLUTION</p></div>
+            <div class="nine"></div>
+            <div class="ten"></div>
+            <div class="eleven"></div>
+            <div class="twelve"><p style="font-family: cargo;">EASY TO SET UP</p></div>
+            <div class="thirteen"></div>
+            <div class="fourteen">
+                <ul>
+                    <li><a href=""><span class="sign"></span>SIGN UP</a></li>
+                    <li><a href=""><span class="get-suitcase"></span>GET NODES</a></li>
+                    <li><a href=""><span class="os"></span>DOWNLOAD CLORELA OS</a></li>
+                    <li><a href=""><span class="make"></span>MAKE THE CONNECTIONS</a></li>
+                    <li><a href=""><span class="capture"></span>CAPTURE CO2 AND CREATE TOKENS</a></li>
+                    <li><a href=""><span class="sell"></span>SELL YOUR TOKENS IN OUR PLATFORM</a></li>
+                </ul>
+            </div>
+            <div class="fifteen"></div>
+            <div class="sixteen"><p style="font-family: cargo;">PARTNERSHIPS</p></div>
+            <div class="seventeen">PRESENCE IN MORE THAN 200 COUNTRYES ALL OVER THE PLANET.</div>
+            <div class="eighteen"></div>
+            <div class="nineteen">Active team at XPRIZE CARBON REMOVAL.</div>
+            <div class="twenty"></div>
+            <div class="twenty-one">FOOT; LEGAL DISCLAIMER, SOCIAL NETWORKS</div>        
+        </div>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="assets/js/asidebar.jquery.js"></script> 
+        </header>
+    </body>
+</html>

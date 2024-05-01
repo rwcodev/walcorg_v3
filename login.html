@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- ////////////// Agregar TAG de rastreo de Google Analytics ///////////// -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6PKCJ3K9Q1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-6PKCJ3K9Q1');
+</script>
+<!-- ////////////// Agregar TAG de rastreo de Google Analytics ///////////// -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login | WALCORG INC</title>
+    <link rel="stylesheet" href="css/login-style.css">
+</head>
+
+<body>
+    <div class="cod-container">
+    <div class="form-header">
+            <img src="/assets/img/walcorg-logo-white.jpg" alt="Logo de WALCORG">
+
+        </div>
+        <div class="form-content">
+            <form action="valida.php" method="POST">
+                <div class="form-title">
+                    <h3>ACCESS</h3>
+                </div>
+                <div class="input-group">
+                    <label class="label" for="usuario"></label>
+                    <input type="usuario" class="form-input" placeholder="usuario" name="usuario" maxlength="200"/>                    
+                </div>
+                <div class="input-group">
+                    <label class="label" for="password_01"></label>
+                    <input type="password_01" class="form-input" placeholder="password_01" name="password_01" maxlength="200"/>                    
+                </div>
+                <div class="input-group">
+                    <input type="submit" class="form-input" value="Iniciar Sesión">
+                    <p>You don't have an account?? <a href="#" class="alt-form">Enter here</a></p>
+                    <p> <a href="#" class="alt-form">I forgot my password.</a></p>
+                </div>               
+            </form>
+        </div>
+        
+        <section id="#new">
+          <div class="form-content" href="#new">        
+            <form action="registro.php" method="post">         
+                    <div class="form-title">               
+                     <h3>REGISTER</h3>
+                 </div>
+                 <div class="input-group">
+                     <label class="label" for="usuario"> </label>
+                     <input type="usuario" class="form-input" placeholder="usuario" name="usuario" maxlength="30"/>                    
+                  </div>
+                  <div class="input-group">
+                      <label class="label" for="email"> </label>
+                      <input type="email" class="form-input" placeholder="email" name="email" maxlength="30"/>                    
+                  </div>
+                  <div class="input-group">
+                      <label class="label" for="password_01"> </label>
+                      <input type="password_01" class="form-input" placeholder="password_01" name="password_01" maxlength="15"/>                    
+                  </div>
+                  <div class="input-group">
+                      <label class="label" for="password__02"> </label>
+                      <input type="password_02" class="form-input" placeholder="password_02" name="password_02" maxlength="15"/>                    
+                  </div>
+                  <div class="input-group">
+                     <label class="label" for="wallett"> </label>
+                     <input type="wallett" class="form-input" placeholder="wallett" name="wallett" maxlength="15"/>                    
+                 </div>
+                 <div class="input-group">
+                     <input type="submit" class="form-input" value="Registrate">
+                     <p>I already have an account<a href="#" class="alt-form">Enter here</a></p>
+                     <p>You don't have an address wallet?<a href="https://www.myetherwallet.com/" class="alt-form">Enter here</a></p>
+                  </div>            
+                 </form>
+             </div>
+        </section>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>
